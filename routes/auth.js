@@ -14,7 +14,7 @@ router.post('/signup', async (req, res) => {
         const user = await createUser(email, password);
         res.status(201).send(user);
     } catch (error) {
-        res.status(500).send(error.message);
+        res.status(600).send(error.message);
     }
 });
 
